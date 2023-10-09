@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--반응형 메타테그-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="my.css">
+    <title>나만의 편의점 재고관리 - 편돌이 v.3</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">내 편의점 재고관리 - 편돌이 v.3</h5>
+        <ul id="nav3" class="nav bg-light">
+            <li class="nav-item">
+                <a class="btn btn-outline-primary" href="#">편돌이 홈</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nostyle.html">NoStyle</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Example</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+    </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">현재 재고</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+          <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+            <div class="input-group">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">창고 층수로 재고 찾기</button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">1</a>
+                    <a class="dropdown-item" href="#">2</a>
+                    <a class="dropdown-item" href="#">3</a>
+                  </div>
+                </div>
+              </div>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control mr-2" type="search" placeholder="물건 이름" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input type = "button" value="Add" class="btn btn-outline-success" onclick="location.href='add.html'"/>
+          </form>
+        </div>
+      </nav>
+    <!-- 목록 표시 -->
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">층수</th>
+            <th scope="col">물건이름</th>
+            <th scope="col">판매회사</th>
+            <th scope="col">발주회사</th>
+            <th scope="col">발주일</th>
+            <th scope="col">메뉴</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>1</td>
+            <td>자갈치</td>
+            <td>농심</td>
+            <td>과자최고</td>
+            <td>2023-10-09</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>1</td>
+            <td>꼬깔콘</td>
+            <td>롯데</td>
+            <td>과자최고</td>
+            <td>2023-10-09</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>1</td>
+            <td>오징어땅콩</td>
+            <td>오리온</td>
+            <td>과자최고</td>
+            <td>2023-10-09</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>2</td>
+            <td>하리보-골드베렌</td>
+            <td>하리보</td>
+            <td>젤리최강</td>
+            <td>2023-10-09</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>2</td>
+            <td>곤약젤리</td>
+            <td>만난라이프</td>
+            <td>젤리직구</td>
+            <td>2023-10-09</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>3</td>
+            <td>왓따</td>
+            <td>롯데</td>
+            <td>껌나라</td>
+            <td>2023-10-09</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <ul class="pagination justify-content-center">
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>--</li>
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>1</li>
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>2</li>
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>3</li>
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>4</li>
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>5</li>
+            <li><a href="#" style="margin-right: 5px;" class="text-secondary"></a>--</li>
+        </ul>
+      </div>
+      <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+          <span class="text-muted">@편돌이 v3, 2023</span>
+        </div>
+      </footer>
+    
+</body>
+</html>
