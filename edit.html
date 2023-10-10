@@ -3,9 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>재고 수정</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/abf15be44c.js" crossorigin="anonymous"></script>
+
+    <script>
+        function validateForm() {
+            var floor = document.getElementById("floor").value;
+            var name = document.getElementById("name").value;
+            var seller = document.getElementById("seller").value;
+            var order = document.getElementById("order").value;
+            var date = document.getElementById("date").value;
+            var price = document.getElementById("price").value;
+            var yn = document.getElementById("yn").value;
+
+            if (name === "" || seller === "" ||date ===""||price ===""||yn === "") {
+                alert("모든 필수 항목을 입력하세요.");
+                return false;
+            }else{
+                if(confirm("게시물을 수정할까요?"))
+                    alert("게시물이 수정되었습니다.");
+                else
+                    return false;
+            }
+        }
+    </script>
+    <style>
+        #content,#form{
+            float: left; 
+            width: 50%; 
+            padding:10px;
+        }
+        input{
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    <p>에딧 화면입니다.</p>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <i class="fa-solid fa-store"></i>
+         <h5 class="my-0 mr-md-auto font-weight-normal">내 편의점 재고관리 - 편돌이 v.3 - 수정사항 입력</h5>
+          <ul id="nav3" class="nav ms-auto bg-light">
+              <li class="nav-item">
+                  <a class="btn btn-outline-primary" href="index.html">편돌이 홈</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">NoStyle</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Example</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+          </ul>
+      </div>
+    <div id="content">
+        <h1>재고 번호: 1</h1>
+        <p>재고 현황: 23개</p>
+        <p>제품명: 자갈치</p>
+        <p>판매회사: 농심</p>
+        <p>발주회사: 과자최고</p>
+        <p>발주일: 2023-10-09</p>
+        <p>가격: 1500원</p>
+        <p>발주가능 여부: 가능</p>
+        <p>위치: 1층(과자창고)</p>
+    </div>
+    <div id="form">
+        <h3>수정할 사항 입력 후 수정 버튼을 누르세요</h3>
+        <form method="post">
+        <label for="floor">층수 :</label>
+        <input type="text" id="floor" name="floor" required><br>
+
+        <label for="name">*품명 :</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="seller">*판매회사 :</label>
+        <input type="text" id="seller" name="seller" required><br>
+
+        <label for="order">발주회사 :</label>
+        <input type="text" id="order" name="order" required><br>
+        
+        <label for="date">*발주일 :</label>
+        <input type="text" id="date" name="date" required><br>
+
+        <label for="price">*가격 :</label>
+        <input type="text" id="price" name="price" required><br>
+
+        <label for="yn">*발주가능여부 :</label>
+        <input type="text" id="yn" name="yn" required><br>
+
+        <label for="floor">층수 :</label>
+        <input type="text" id="floor" name="floor" required><br>
+
+        <input type="submit" value="수정" onclick="validateForm()">
+    </form>
+    </div>
+    
 </body>
 </html>
