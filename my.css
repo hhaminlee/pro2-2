@@ -1,0 +1,36 @@
+@media (max-width: 767px){/*핸드폰용*/
+    body{
+        text-align: center;
+        padding: 20px;
+    }   
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px){/*데스크탑용*/
+    body{
+        text-align: center;
+    }
+    .top{
+        display: flex;
+        margin-top: 20px;        
+    }
+    .second{
+        flex: 1;
+        width: 30%;
+    }
+    #nav3{
+        flex: 1;
+        width: 30%;
+    }
+    #content,#form{
+        float: left; 
+        width: 40%; 
+        padding:10px;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+}
