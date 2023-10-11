@@ -10,11 +10,8 @@
 
     <script>
         function validateForm() {
-            var floor = document.getElementById("floor").value;
             var name = document.getElementById("name").value;
             var seller = document.getElementById("seller").value;
-            var order = document.getElementById("order").value;
-            var date = document.getElementById("date").value;
             var price = document.getElementById("price").value;
             var yn = document.getElementById("yn").value;
 
@@ -65,7 +62,12 @@
         <h5>*표시는 필수입력사항입니다.</h5>
         <form method="post">
         <label for="floor">층수 :</label>
-        <input type="text" id="floor" name="floor" required><br>
+        <select required> 
+            <option value="1">1</option> 
+            <option value="2">2</option> 
+            <option value="3">3</option> 
+          </select>
+        <br>
 
         <label for="name">*품명 :</label>
         <input type="text" id="name" name="name" required><br>
@@ -77,16 +79,17 @@
         <input type="text" id="order" name="order" required><br>
         
         <label for="date">*발주일 :</label>
-        <input type="text" id="date" name="date" required><br>
+        <input type="date" id="date" name="date" required><br>
 
         <label for="price">*가격 :</label>
         <input type="text" id="price" name="price" required><br>
 
         <label for="yn">*발주가능여부 :</label>
-        <input type="text" id="yn" name="yn" required><br>
-
-        <label for="floor">층수 :</label>
-        <input type="text" id="floor" name="floor" required><br>
+        <select required> 
+            <option value="1">y</option> 
+            <option value="2">n</option>
+          </select>
+        <br>
 
         <input type="submit" value="수정" onclick="validateForm()">
     </form>

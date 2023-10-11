@@ -7,13 +7,12 @@
     <script src="https://kit.fontawesome.com/abf15be44c.js" crossorigin="anonymous"></script>
     <script>
         function validateForm() {
-            var floor = document.getElementById("floor").value;
             var name = document.getElementById("name").value;
             var seller = document.getElementById("seller").value;
-            var order = document.getElementById("order").value;
+            var order = document.getElementById("order").value;            
             var date = document.getElementById("date").value;
 
-            if (floor === "" || name === "" || seller === "" || order === "" || date ==="") {
+            if (name === "" || seller === "" || order === "" || date==="") {
                 alert("모든 필수 항목을 입력하세요.");
                 return false;
             }else{
@@ -49,8 +48,12 @@
       </div>
     <form method="post">
         <label for="floor">층수 :</label>
-        <input type="text" id="floor" name="floor" required><br>
-
+        <select required> 
+            <option value="1">1</option> 
+            <option value="2">2</option> 
+            <option value="3">3</option> 
+          </select>
+        <br>
         <label for="name">품명 :</label>
         <input type="text" id="name" name="name" required><br>
 
@@ -61,7 +64,7 @@
         <input type="text" id="order" name="order" required><br>
 
         <label for="date">날짜 :</label>
-        <input type="text" id="date" name="date" required><br>
+        <input type="date" id="date" name="date" required><br>
 
         <input type="submit" value="추가" onclick="validateForm()">
     </form>
