@@ -60,15 +60,14 @@
     <div id="form">
         <h3>수정할 사항 입력 후 수정 버튼을 누르세요</h3>
         <h5>*표시는 필수입력사항입니다.</h5>
-        <form method="post">
+        <form>
         <label for="floor">층수 :</label>
-        <select required> 
+        <select> 
             <option value="1">1</option> 
             <option value="2">2</option> 
             <option value="3">3</option> 
           </select>
         <br>
-
         <label for="name">*품명 :</label>
         <input type="text" id="name" name="name" required><br>
 
@@ -76,7 +75,7 @@
         <input type="text" id="seller" name="seller" required><br>
 
         <label for="order">발주회사 :</label>
-        <input type="text" id="order" name="order" required><br>
+        <input type="text" id="order" name="order"><br>
         
         <label for="date">*발주일 :</label>
         <input type="date" id="date" name="date" required><br>
