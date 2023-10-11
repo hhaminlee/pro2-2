@@ -13,9 +13,8 @@
             var name = document.getElementById("name").value;
             var seller = document.getElementById("seller").value;
             var price = document.getElementById("price").value;
-            var yn = document.getElementById("yn").value;
 
-            if (name === "" || seller === "" ||date ===""||price ===""||yn === "") {
+            if (name === "" || seller === "" ||price ==="") {
                 alert("모든 필수 항목을 입력하세요.");
                 return false;
             }else{
@@ -83,8 +82,8 @@
         <label for="price">*가격 :</label>
         <input type="text" id="price" name="price" required><br>
 
-        <label for="yn">*발주가능여부 :</label>
-        <select required> 
+        <label for="yn">발주가능여부 :</label>
+        <select> 
             <option value="1">y</option> 
             <option value="2">n</option>
           </select>
